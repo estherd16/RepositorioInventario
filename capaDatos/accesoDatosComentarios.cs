@@ -127,5 +127,65 @@ namespace capaDatos
 
          }
 
+         public int EditarComentarios(Comentarios co)
+         {
+             try
+             {
+                 SqlConnection cnx = cn.conectar();
+                 cm = new SqlCommand("comentar", cnx);
+                 cm.Parameters.AddWithValue("@b", 4);
+                 cm.Parameters.AddWithValue("@idcomentario", co.idcomentario);
+                 cm.Parameters.AddWithValue("@nombres", "");
+                 cm.Parameters.AddWithValue("@correo", "");
+                 cm.Parameters.AddWithValue("@telefono", "");
+                 cm.Parameters.AddWithValue("@mensaje", co.mensaje);
+
+                 cm.CommandType = CommandType.StoredProcedure;
+                 cnx.Open();
+                 cm.ExecuteNonQuery();
+                 indicador = 1;
+
+             }
+             catch (Exception e)
+             {
+                 e.Message.ToString();
+                 indicador = 0;
+             }
+             finally
+             {
+                 cm.Connection.Close();
+             }
+
+             return indicador;
+         }
+
+         public List<Comentarios> BuscarComentarios(string dato)
+         {
+             try
+             {
+                 SqlConnection cnx = cn.conectar();
+                 cm = new SqlCommand("comentar", cnx);
+                 cm.Parameters.AddWithValue("@b", 5);
+                 cm.Parameters.AddWithValue("@idcomentario", "");
+                 cm.Parameters.AddWithValue("@nombres",dato);
+                 cm.Parameters.AddWithValue("@correo", "");
+                 cm.Parameters.AddWithValue("@telefono", "");
+                 cm.Parameters.AddWithValue("@mensaje", dato);
+
+                 cm.CommandType = CommandType.StoredProcedure;
+                 cnx.Open();
+                 cm.ExecuteNonQuery();
+                 listaComentarios = new List<Comentarios>();
+                 while (dr.Read())
+                
+
+             }
+             catch (Exception)
+             {
+                 
+                 throw;
+             }
+         }
+
     }
 }
