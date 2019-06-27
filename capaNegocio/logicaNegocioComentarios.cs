@@ -29,11 +29,11 @@ namespace capaNegocio
 
         public int EditarComentarios(Comentarios co)
         {
-            return ac.editarComentarios(co);
+            return ac.EditarComentarios(co);
         }
         public List<Comentarios> BuscarComentarios(string dato)
         {
-            return ac.buscarComentarios(dato);
+            return ac.BuscarComentarios(dato);
         }
 
 

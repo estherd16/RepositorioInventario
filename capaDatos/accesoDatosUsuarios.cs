@@ -2,37 +2,35 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;//Agregar
 using capaEntidades;//referencias
-using System.Data;//agregar
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+using System.Data;
 
 namespace capaDatos
 {
-     public class accesoDatosComentarios
+    class accesoDatosUsuarios
     {
          SqlConnection cnx; //Conexión
-         Comentarios s = new Comentarios();//Capaentidades
+         Usuarios u = new Usuarios();//Capaentidades
          Conexion cn = new Conexion();
          SqlCommand cm = null; //Comandos SQL
          int indicador = 0;
 
          SqlDataReader dr = null;
-         List<Comentarios> listaComentarios = null;
+         List<Usuarios> listaUsuarios = null;
 
-         public int insertarComentarios(Comentarios co)
+         public int insertarUsuarios(Usuarios us)
          {
              try
              {
                  SqlConnection cnx = cn.conectar();
 
-                 cm = new SqlCommand("Comentar", cnx);
+                 cm = new SqlCommand("insertar", cnx);
                  cm.Parameters.AddWithValue("@b", 1);
-                 cm.Parameters.AddWithValue("@idcomentario", "");
-                 cm.Parameters.AddWithValue("@nombres", co.nombres);
-                 cm.Parameters.AddWithValue("@correo", co.correo);
-                 cm.Parameters.AddWithValue("@telefono", co.telefono);
-                 cm.Parameters.AddWithValue("@mensaje", co.mensaje);
+                 cm.Parameters.AddWithValue("@idusuario", "");
+                 cm.Parameters.AddWithValue("@cedula", us.cedula);
+                 cm.Parameters.AddWithValue("@nombres", us.nombres);
+                 cm.Parameters.AddWithValue("@apellidos", us.apellidos);
+                 cm.Parameters.AddWithValue("@email", us.email);
+                 cm.Parameters.AddWithValue("@telefono", us.telefono);
 
                  cm.CommandType = CommandType.StoredProcedure;
                  cnx.Open();
@@ -52,39 +50,41 @@ namespace capaDatos
              return indicador;
          }
 
-         public List<Comentarios> listarComentarios()
+         public List<Usuarios> listarUsuarios()
          {
              try
              {
                  SqlConnection cnx = cn.conectar();
                  cm = new SqlCommand("listar", cnx);
                  cm.Parameters.AddWithValue("@b", 3);
-                 cm.Parameters.AddWithValue("@idcomentario", "");
+                 cm.Parameters.AddWithValue("@idusuario", "");
+                 cm.Parameters.AddWithValue("@cedula", "");
                  cm.Parameters.AddWithValue("@nombres", "");
-                 cm.Parameters.AddWithValue("@correo", "");
+                 cm.Parameters.AddWithValue("@apellidos", "");
+                 cm.Parameters.AddWithValue("@email", "");
                  cm.Parameters.AddWithValue("@telefono", "");
-                 cm.Parameters.AddWithValue("@mensaje", "");
 
                  cm.CommandType = CommandType.StoredProcedure;
                  cnx.Open();
                  dr = cm.ExecuteReader();
-                 listaComentarios = new List<Comentarios>();
+                 listaUsuarios = new List<Usuarios>();
                  while (dr.Read())
                  {
-                     Comentarios c = new Comentarios();
-                     c.idcomentario = Convert.ToInt32(dr["idcomentario"].ToString());
-                     c.nombres = dr["nombre"].ToString();
-                     c.correo = dr["correo"].ToString();
-                     c.telefono = dr["telefono"].ToString();
-                     c.mensaje = dr["mensaje"].ToString();
-                     listaComentarios.Add(c);
+                     Usuarios usu = new Usuarios();
+                     usu.idusuario = Convert.ToInt32(dr["idusuario"].ToString());
+                     usu.cedula = dr["cedula"].ToString();
+                     usu.nombres = dr["nombres"].ToString();
+                     usu.apellidos = dr["apellidos"].ToString();
+                     usu.email = dr["email"].ToString();
+                     usu.telefono = dr["telefono"].ToString();
+                     listaUsuarios.Add(usu);
                  }
                 
              }
              catch (Exception e)
              {
                  e.Message.ToString();
-                 listaComentarios = null;
+                 listaUsuarios = null;
              }
 
              finally 
@@ -92,22 +92,23 @@ namespace capaDatos
                  cm.Connection.Close();
              }
 
-             return listaComentarios;
+             return listaUsuarios;
 
          }
 
-         public int eliminarComentarios(int idcoment)
+         public int eliminarUsuarios(int idusuario)
          {
              try
              {
                  SqlConnection cnx = cn.conectar();
                  cm = new SqlCommand("eliminar", cnx);
                  cm.Parameters.AddWithValue("@b", 2);
-                 cm.Parameters.AddWithValue("@idcomentario", idcoment);
+                 cm.Parameters.AddWithValue("@idusuario", idusuario);
+                 cm.Parameters.AddWithValue("@cedula", "");
                  cm.Parameters.AddWithValue("@nombres", "");
-                 cm.Parameters.AddWithValue("@correo", "");
+                 cm.Parameters.AddWithValue("@apellidos", "");
+                 cm.Parameters.AddWithValue("@email", "");
                  cm.Parameters.AddWithValue("@telefono", "");
-                 cm.Parameters.AddWithValue("@mensaje", "");
 
                  cm.CommandType = CommandType.StoredProcedure;
                  cnx.Open();
@@ -127,18 +128,19 @@ namespace capaDatos
 
          }
 
-         public int EditarComentarios(Comentarios co)
+         public int EditarUsuarios(Usuarios us)
          {
              try
              {
                  SqlConnection cnx = cn.conectar();
                  cm = new SqlCommand("editar", cnx);
                  cm.Parameters.AddWithValue("@b", 4);
-                 cm.Parameters.AddWithValue("@idcomentario", co.idcomentario);
-                 cm.Parameters.AddWithValue("@nombres", "");
-                 cm.Parameters.AddWithValue("@correo", "");
-                 cm.Parameters.AddWithValue("@telefono", "");
-                 cm.Parameters.AddWithValue("@mensaje", co.mensaje);
+                 cm.Parameters.AddWithValue("@idusuario", us.idusuario);
+                 cm.Parameters.AddWithValue("@cedula", "");
+                 cm.Parameters.AddWithValue("@nombres", us.idusuario);
+                 cm.Parameters.AddWithValue("@apellidos", us.idusuario);
+                 cm.Parameters.AddWithValue("@email", "");
+                 cm.Parameters.AddWithValue("@telefono", us.idusuario);
 
                  cm.CommandType = CommandType.StoredProcedure;
                  cnx.Open();
@@ -159,43 +161,45 @@ namespace capaDatos
              return indicador;
          }
 
-         public List<Comentarios> BuscarComentarios(string dato)
+         public List<Usuarios> BuscarUsuarios(string dato)
          {
              try
              {
                  SqlConnection cnx = cn.conectar();
                  cm = new SqlCommand("buscar", cnx);
                  cm.Parameters.AddWithValue("@b", 5);
-                 cm.Parameters.AddWithValue("@idcomentario", "");
+                 cm.Parameters.AddWithValue("@idusuario", dato);
+                 cm.Parameters.AddWithValue("@cedula",dato);
                  cm.Parameters.AddWithValue("@nombres", dato);
-                 cm.Parameters.AddWithValue("@correo", "");
+                 cm.Parameters.AddWithValue("@apellidos", dato);
+                 cm.Parameters.AddWithValue("@email", "");
                  cm.Parameters.AddWithValue("@telefono", "");
-                 cm.Parameters.AddWithValue("@mensaje", dato);
 
                  cm.CommandType = CommandType.StoredProcedure;
                  cnx.Open();
                  dr = cm.ExecuteReader();
-                 listaComentarios = new List<Comentarios>();
+                 listaUsuarios = new List<Usuarios>();
                  while (dr.Read())
                  {
-                     Comentarios c = new Comentarios();
-                     c.idcomentario = Convert.ToInt32(dr["idcomentario"].ToString());
-                     c.nombres = dr["nombre"].ToString();
-                     c.correo = dr["correo"].ToString();
-                     c.telefono = dr["telefono"].ToString();
-                     c.mensaje = dr["mensaje"].ToString();
-                     listaComentarios.Add(c);
+                     Usuarios u = new Usuarios();
+                     u.idusuario = Convert.ToInt32(dr["idusuario"].ToString());
+                     u.cedula = dr["cedula"].ToString();
+                     u.nombres = dr["nombres"].ToString();
+                     u.apellidos = dr["apellidos"].ToString();
+                     u.email = dr["email"].ToString();
+                     u.telefono = dr["telefono"].ToString();
+                     listaUsuarios.Add(u);
                  }
              }
              catch (Exception e)
              {
                  e.Message.ToString();
-                 listaComentarios = null;
+                 listaUsuarios = null;
              }
              finally
              { cm.Connection.Close(); }
 
-             return listaComentarios;
+             return listaUsuarios;
          }
 
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidades
 {
-    class recursos
+    public class recursos
     {
         public int idrecursos { get; set; }
         public string nombrer { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidades
 {
-    class Cuentas
+    public class Cuentas
     {
         public int idcuenta { get; set; }
         public string nombreuser { get; set; }
