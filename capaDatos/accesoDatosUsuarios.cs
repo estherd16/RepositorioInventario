@@ -6,7 +6,7 @@ using System.Data;
 
 namespace capaDatos
 {
-    class accesoDatosUsuarios
+    public class accesoDatosUsuarios
     {
          SqlConnection cnx; //Conexión
          Usuarios u = new Usuarios();//Capaentidades

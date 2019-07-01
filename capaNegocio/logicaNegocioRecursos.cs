@@ -8,32 +8,32 @@ using capaDatos;
 
 namespace capaNegocio
 {
-    class logicaNegocioRecursos
+    public class logicaNegocioRecursos
     {
-        accesoDatosrecursos ar = new accesoDatosrecursos();
+        accesoDatosRecursos ar = new accesoDatosRecursos();
 
-        public int insertarCuentas(Cuentas cu)
+        public int insertarRecursos(recursos rec)
         {
-            return acu.insertarCuentas(cu);
+            return ar.insertarRecursos(rec);
         }
 
-        public List<Cuentas> listarCuentas()
+        public List<recursos> listarRecursos()
         {
-            return acu.listarCuentas();
+            return ar.listarRecursos();
         }
 
-        public int eliminarCuentas(int idcuenta)
+        public int eliminarRecursos(int idrecursos)
         {
-            return acu.eliminarCuentas(idcuenta);
+            return ar.eliminarRecursos(idrecursos);
         }
 
-        public int EditarCuentas(Cuentas cu)
+        public int EditarRecursos(recursos rec)
         {
-            return acu.EditarCuentas(cu);
+            return ar.EditarRecursos(rec);
         }
-        public List<Cuentas> BuscarCuentas(string dato)
+        public List<recursos> BuscarRecursos(string dato)
         {
-            return acu.BuscarCuentas(dato);
+            return ar.BuscarRecursos(dato);
         }
     }
 }

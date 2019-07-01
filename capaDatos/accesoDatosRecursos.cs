@@ -120,7 +120,7 @@ namespace capaDatos
 
         }
 
-        public int EditarComentarios(recursos re)
+        public int EditarRecursos(recursos re)
         {
             try
             {

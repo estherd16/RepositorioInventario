@@ -6,7 +6,7 @@ using System.Data;
 
 namespace capaDatos
 {
-    class accesoDatosSolicitud
+    public class accesoDatosSolicitud
     {
         SqlConnection cnx; //Conexión
         Solicitud so = new Solicitud();//Capaentidades
@@ -17,7 +17,7 @@ namespace capaDatos
         SqlDataReader dr = null;
         List<Solicitud> listaSolicitud = null;
 
-        public int insertarRecursos(Solicitud sol)
+        public int insertarSolicitud(Solicitud sol)
         {
             try
             {

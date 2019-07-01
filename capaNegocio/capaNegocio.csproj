@@ -39,9 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logicaNegocioUsuarios.cs" />
     <Compile Include="logicaNegocioComentarios.cs" />
     <Compile Include="logicaNegocioCuentas.cs" />
     <Compile Include="logicaNegocioRecursos.cs" />
+    <Compile Include="logicaNegocioSolicitud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
