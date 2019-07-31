@@ -23,7 +23,7 @@ namespace capaDatos
             {
                 SqlConnection cnx = cn.conectar();
 
-                cm = new SqlCommand("insertar", cnx);
+                cm = new SqlCommand("solicitud_pr", cnx);
                 cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@idsolicitud", "");
                 cm.Parameters.AddWithValue("@aula", sol.aula);
@@ -60,8 +60,8 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("listar", cnx);
-                cm.Parameters.AddWithValue("@b", 3);
+                cm = new SqlCommand("solicitud_pr", cnx);
+                cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@idsolicitud", "");
                 cm.Parameters.AddWithValue("@aula", "");
                 cm.Parameters.AddWithValue("@nivel", "");
@@ -116,8 +116,8 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("eliminar", cnx);
-                cm.Parameters.AddWithValue("@b", 2);
+                cm = new SqlCommand("solicitud_pr", cnx);
+                cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@idsolicitud", idsolicitud);
                 cm.Parameters.AddWithValue("@aula", "");
                 cm.Parameters.AddWithValue("@nivel", "");
@@ -153,19 +153,19 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("editar", cnx);
+                cm = new SqlCommand("solicitud_pr", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@idsolicitud", sl.idsolicitud);
                 cm.Parameters.AddWithValue("@aula", sl.aula);
                 cm.Parameters.AddWithValue("@nivel", sl.nivel);
-                cm.Parameters.AddWithValue("@fechasolicitud", "");
-                cm.Parameters.AddWithValue("@fechauso", "");
-                cm.Parameters.AddWithValue("@horainicio", "");
-                cm.Parameters.AddWithValue("@horafinal", "");
+                cm.Parameters.AddWithValue("@fechasolicitud", sl.fechasolicitud);
+                cm.Parameters.AddWithValue("@fechauso", sl.fechauso);
+                cm.Parameters.AddWithValue("@horainicio", sl.horainicio);
+                cm.Parameters.AddWithValue("@horafinal", sl.horafinal);
                 cm.Parameters.AddWithValue("@carrera", sl.carrera);
                 cm.Parameters.AddWithValue("@asignatura", sl.asignatura);
-                cm.Parameters.AddWithValue("@idrecursos", "");
-                cm.Parameters.AddWithValue("@idusuario", "");
+                cm.Parameters.AddWithValue("@idrecursos", sl.idrecursos);
+                cm.Parameters.AddWithValue("@idusuario", sl.idusuario);
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -191,10 +191,10 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("buscar", cnx);
+                cm = new SqlCommand("solicitud_pr", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
-                cm.Parameters.AddWithValue("@idsolicitud", dato);
-                cm.Parameters.AddWithValue("@aula", "");
+                cm.Parameters.AddWithValue("@idsolicitud", "");
+                cm.Parameters.AddWithValue("@aula",dato);
                 cm.Parameters.AddWithValue("@nivel", "");
                 cm.Parameters.AddWithValue("@fechasolicitud", "");
                 cm.Parameters.AddWithValue("@fechauso", "");
@@ -203,7 +203,7 @@ namespace capaDatos
                 cm.Parameters.AddWithValue("@carrera", "");
                 cm.Parameters.AddWithValue("@asignatura", "");
                 cm.Parameters.AddWithValue("@idrecursos", "");
-                cm.Parameters.AddWithValue("@idusuario", dato);
+                cm.Parameters.AddWithValue("@idusuario", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();

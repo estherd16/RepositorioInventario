@@ -23,10 +23,10 @@ namespace capaDatos
             {
                 SqlConnection cnx = cn.conectar();
 
-                cm = new SqlCommand("insertar", cnx);
+                cm = new SqlCommand("recursos_proc", cnx);
                 cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@idrecursos", "");
-                cm.Parameters.AddWithValue("@nombrer", rec.idrecursos);
+                cm.Parameters.AddWithValue("@nombrer", rec.nombrer);
                 cm.Parameters.AddWithValue("@codigo", rec.codigo);
                 cm.Parameters.AddWithValue("@descripcion", rec.descripcion);
 
@@ -53,8 +53,8 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("listar", cnx);
-                cm.Parameters.AddWithValue("@b", 3);
+                cm = new SqlCommand("recursos_proc", cnx);
+                cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@idrecursos", "");
                 cm.Parameters.AddWithValue("@nombrer", "");
                 cm.Parameters.AddWithValue("@codigo", "");
@@ -95,8 +95,8 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("eliminar", cnx);
-                cm.Parameters.AddWithValue("@b", 2);
+                cm = new SqlCommand("recursos_proc", cnx);
+                cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@idrecursos", idrecursos);
                 cm.Parameters.AddWithValue("@nombrer", "");
                 cm.Parameters.AddWithValue("@codigo", "");
@@ -125,11 +125,11 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("editar", cnx);
+                cm = new SqlCommand("recursos_proc", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@idrecursos", re.idrecursos);
                 cm.Parameters.AddWithValue("@nombrer", re.nombrer);
-                cm.Parameters.AddWithValue("@codigo", "");
+                cm.Parameters.AddWithValue("@codigo", re.codigo);
                 cm.Parameters.AddWithValue("@descripcion", re.descripcion);
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -156,9 +156,9 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("buscar", cnx);
+                cm = new SqlCommand("recursos_proc", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
-                cm.Parameters.AddWithValue("@idrecursos", dato);
+                cm.Parameters.AddWithValue("@idrecursos","");
                 cm.Parameters.AddWithValue("@nombrer", dato);
                 cm.Parameters.AddWithValue("@codigo", "");
                 cm.Parameters.AddWithValue("@descripcion", "");

@@ -24,12 +24,13 @@ namespace capaDatos
             {
                 SqlConnection cnx = cn.conectar();
 
-                cm = new SqlCommand("insertar", cnx);
+                cm = new SqlCommand("pro_cuentas", cnx);
                 cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@idcuenta", "");
                 cm.Parameters.AddWithValue("@nombreuser", cu.nombreuser);
                 cm.Parameters.AddWithValue("@clave", cu.clave);
                 cm.Parameters.AddWithValue("@rol", cu.rol);
+                cm.Parameters.AddWithValue("@idusuario", cu.idusuario);
                 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -55,12 +56,13 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("listar", cnx);
-                cm.Parameters.AddWithValue("@b", 3);
+                cm = new SqlCommand("pro_cuentas", cnx);
+                cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@idcuenta", "");
                 cm.Parameters.AddWithValue("@nombreuser", "");
                 cm.Parameters.AddWithValue("@clave", "");
                 cm.Parameters.AddWithValue("@rol", "");
+                cm.Parameters.AddWithValue("@idusuario", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -73,6 +75,7 @@ namespace capaDatos
                     cue.nombreuser = dr["nombre user"].ToString();
                     cue.clave = dr["clave"].ToString();
                     cue.rol = dr["rol"].ToString();
+                    cue.idusuario = Convert.ToInt32(dr["idusuario"].ToString());
                     listaCuentas.Add(cue);
                 }
 
@@ -97,12 +100,13 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("eliminar", cnx);
-                cm.Parameters.AddWithValue("@b", 2);
+                cm = new SqlCommand("pro_cuentas", cnx);
+                cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@idcomentario", idcuenta);
                 cm.Parameters.AddWithValue("@nombreuser", "");
                 cm.Parameters.AddWithValue("@clave", "");
                 cm.Parameters.AddWithValue("@rol", "");
+                cm.Parameters.AddWithValue("@idusuario", "");
                
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -127,12 +131,13 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("editar", cnx);
+                cm = new SqlCommand("pro_cuentas", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@idcuenta", cta.idcuenta);
                 cm.Parameters.AddWithValue("@nombreuser", cta.nombreuser);
                 cm.Parameters.AddWithValue("@clave", cta.clave);
                 cm.Parameters.AddWithValue("@rol", cta.rol);
+                cm.Parameters.AddWithValue("@idusuario", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -158,12 +163,13 @@ namespace capaDatos
             try
             {
                 SqlConnection cnx = cn.conectar();
-                cm = new SqlCommand("buscar", cnx);
+                cm = new SqlCommand("pro_cuentas", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
-                cm.Parameters.AddWithValue("@idcuenta", dato);
+                cm.Parameters.AddWithValue("@idcuenta", "");
                 cm.Parameters.AddWithValue("@nombreuser", dato);
                 cm.Parameters.AddWithValue("@clave", "");
                 cm.Parameters.AddWithValue("@rol", "");
+                cm.Parameters.AddWithValue("@idusuario", "");
                 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -176,6 +182,7 @@ namespace capaDatos
                     ct.nombreuser = dr["nombre user"].ToString();
                     ct.clave = dr["clave"].ToString();
                     ct.rol = dr["rol"].ToString();
+                    ct.idusuario = Convert.ToInt32(dr["idusuario"].ToString());
                     listaCuentas.Add(ct);
                 }
             }

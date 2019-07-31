@@ -57,8 +57,8 @@ namespace capaDatos
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("listar", cnx);
-                 cm.Parameters.AddWithValue("@b", 3);
+                 cm = new SqlCommand("Comentar", cnx);
+                 cm.Parameters.AddWithValue("@b", 2);
                  cm.Parameters.AddWithValue("@idcomentario", "");
                  cm.Parameters.AddWithValue("@nombres", "");
                  cm.Parameters.AddWithValue("@correo", "");
@@ -96,14 +96,14 @@ namespace capaDatos
 
          }
 
-         public int eliminarComentarios(int idcoment)
+         public int eliminarComentarios(int idcomentario)
          {
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("eliminar", cnx);
-                 cm.Parameters.AddWithValue("@b", 2);
-                 cm.Parameters.AddWithValue("@idcomentario", idcoment);
+                 cm = new SqlCommand("Comentar", cnx);
+                 cm.Parameters.AddWithValue("@b", 3);
+                 cm.Parameters.AddWithValue("@idcomentario", idcomentario);
                  cm.Parameters.AddWithValue("@nombres", "");
                  cm.Parameters.AddWithValue("@correo", "");
                  cm.Parameters.AddWithValue("@telefono", "");
@@ -132,7 +132,7 @@ namespace capaDatos
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("editar", cnx);
+                 cm = new SqlCommand("Comentar", cnx);
                  cm.Parameters.AddWithValue("@b", 4);
                  cm.Parameters.AddWithValue("@idcomentario", co.idcomentario);
                  cm.Parameters.AddWithValue("@nombres", "");
@@ -164,13 +164,13 @@ namespace capaDatos
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("buscar", cnx);
+                 cm = new SqlCommand("Comentar", cnx);
                  cm.Parameters.AddWithValue("@b", 5);
                  cm.Parameters.AddWithValue("@idcomentario", "");
                  cm.Parameters.AddWithValue("@nombres", dato);
                  cm.Parameters.AddWithValue("@correo", "");
                  cm.Parameters.AddWithValue("@telefono", "");
-                 cm.Parameters.AddWithValue("@mensaje", dato);
+                 cm.Parameters.AddWithValue("@mensaje", "");
 
                  cm.CommandType = CommandType.StoredProcedure;
                  cnx.Open();

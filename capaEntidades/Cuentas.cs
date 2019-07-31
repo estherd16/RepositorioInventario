@@ -12,6 +12,7 @@ namespace capaEntidades
         public string nombreuser { get; set; }
         public string clave { get; set; }
         public string rol { get; set; }
+        public int idusuario { get; set; }
         //traer todas las clases para todas las clases
     }
 }

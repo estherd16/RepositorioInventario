@@ -1,0 +1,5 @@
+E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\bin\Debug\capaEntidades.dll
+E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\bin\Debug\capaEntidades.pdb
+E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\obj\Debug\capaEntidades.csprojResolveAssemblyReference.cache
+E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\obj\Debug\capaEntidades.dll
+E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\obj\Debug\capaEntidades.pdb

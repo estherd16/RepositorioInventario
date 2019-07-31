@@ -23,7 +23,7 @@ namespace capaDatos
              {
                  SqlConnection cnx = cn.conectar();
 
-                 cm = new SqlCommand("insertar", cnx);
+                 cm = new SqlCommand("usuarios_pr", cnx);
                  cm.Parameters.AddWithValue("@b", 1);
                  cm.Parameters.AddWithValue("@idusuario", "");
                  cm.Parameters.AddWithValue("@cedula", us.cedula);
@@ -55,8 +55,8 @@ namespace capaDatos
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("listar", cnx);
-                 cm.Parameters.AddWithValue("@b", 3);
+                 cm = new SqlCommand("usuarios_pr", cnx);
+                 cm.Parameters.AddWithValue("@b", 2);
                  cm.Parameters.AddWithValue("@idusuario", "");
                  cm.Parameters.AddWithValue("@cedula", "");
                  cm.Parameters.AddWithValue("@nombres", "");
@@ -101,8 +101,8 @@ namespace capaDatos
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("eliminar", cnx);
-                 cm.Parameters.AddWithValue("@b", 2);
+                 cm = new SqlCommand("usuarios_pr", cnx);
+                 cm.Parameters.AddWithValue("@b", 3);
                  cm.Parameters.AddWithValue("@idusuario", idusuario);
                  cm.Parameters.AddWithValue("@cedula", "");
                  cm.Parameters.AddWithValue("@nombres", "");
@@ -133,14 +133,14 @@ namespace capaDatos
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("editar", cnx);
+                 cm = new SqlCommand("usuarios_pr", cnx);
                  cm.Parameters.AddWithValue("@b", 4);
                  cm.Parameters.AddWithValue("@idusuario", us.idusuario);
-                 cm.Parameters.AddWithValue("@cedula", "");
-                 cm.Parameters.AddWithValue("@nombres", us.idusuario);
-                 cm.Parameters.AddWithValue("@apellidos", us.idusuario);
-                 cm.Parameters.AddWithValue("@email", "");
-                 cm.Parameters.AddWithValue("@telefono", us.idusuario);
+                 cm.Parameters.AddWithValue("@cedula", us.cedula);
+                 cm.Parameters.AddWithValue("@nombres", us.nombres);
+                 cm.Parameters.AddWithValue("@apellidos", us.apellidos);
+                 cm.Parameters.AddWithValue("@email", us.email);
+                 cm.Parameters.AddWithValue("@telefono", us.telefono);
 
                  cm.CommandType = CommandType.StoredProcedure;
                  cnx.Open();
@@ -166,10 +166,10 @@ namespace capaDatos
              try
              {
                  SqlConnection cnx = cn.conectar();
-                 cm = new SqlCommand("buscar", cnx);
+                 cm = new SqlCommand("usuarios_pr", cnx);
                  cm.Parameters.AddWithValue("@b", 5);
-                 cm.Parameters.AddWithValue("@idusuario", dato);
-                 cm.Parameters.AddWithValue("@cedula",dato);
+                 cm.Parameters.AddWithValue("@idusuario", "");
+                 cm.Parameters.AddWithValue("@cedula","");
                  cm.Parameters.AddWithValue("@nombres", dato);
                  cm.Parameters.AddWithValue("@apellidos", dato);
                  cm.Parameters.AddWithValue("@email", "");
