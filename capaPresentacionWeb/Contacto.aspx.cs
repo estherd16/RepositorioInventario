@@ -11,9 +11,9 @@ namespace capaPresentacionWeb
 {
     public partial class Contacto : System.Web.UI.Page
     {
-
         Comentarios CE = new Comentarios();
         logicaNegocioComentarios CN = new logicaNegocioComentarios();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -28,7 +28,7 @@ namespace capaPresentacionWeb
                 CE.telefono = txttelefono.Value;
                 CE.mensaje = txtmensaje.Value;
 
-                if (CN.insertarComentarios(CE) == 1)
+                if (CN.insertarComentarios(CE)==1)
                 {
                     indicador.Text = "Enviado!!";
                     indicador.CssClass = "label label-success";
@@ -38,15 +38,17 @@ namespace capaPresentacionWeb
                     txtmensaje.Value = "";
                     txttelefono.Value = "";
                 }
+
                 else
                 {
                     indicador.Text = "Error al enviar";
                     indicador.CssClass = "label label-danger";
                 }
-            }         
+            }
             catch (Exception ex)
             {
                 indicador.Text = ex.Message.ToString();
+               
             }
         }
     }

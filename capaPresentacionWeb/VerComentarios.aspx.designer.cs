@@ -10,7 +10,7 @@
 namespace capaPresentacionWeb {
     
     
-    public partial class Formulario_web1 {
+    public partial class VerComentarios {
         
         /// <summary>
         /// Control GVcomentarios.

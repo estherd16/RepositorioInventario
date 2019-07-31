@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maqueta.Master" AutoEventWireup="true" CodeBehind="VerComentarios.aspx.cs" Inherits="capaPresentacionWeb.Formulario_web1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maqueta.Master" AutoEventWireup="true" CodeBehind="VerComentarios.aspx.cs" Inherits="capaPresentacionWeb.VerComentarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<asp:GridView ID="GVcomentarios" runat="server"
+
+    <asp:GridView ID="GVcomentarios" runat="server"
      AutoGenerateColumns="False"
      CssClass="table table-bordered bs-table"
      DataKeyNames="idcomentario"
@@ -11,7 +12,7 @@
      OnRowDeleting="GVcomentarios_RowDeleting"
     OnDataBound="GVcomentarios_DataBound"
     
-     AllowPaging="true">
+     AllowPaging="true" OnSelectedIndexChanged="GVcomentarios_SelectedIndexChanged">
 
     <HeaderStyle BackColor="#337ab7" Font-Bold="false" ForeColor="White" />
     <EditRowStyle BackColor="#ffffcc" />

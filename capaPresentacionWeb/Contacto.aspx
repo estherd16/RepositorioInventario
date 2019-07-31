@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maqueta.Master" AutoEventWireup="true" CodeBehind="Contacto.aspx.cs" Inherits="capaPresentacionWeb.Contacto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div id="Contacto" class="container">  <!---- Inicio Contactos---->
      <div class="row">
         <div class="col-md-12">
@@ -56,6 +57,7 @@
             </div>
         </div>
     </div>
-        </div>
+</div> <!--Cierre contacto-->
+
 </asp:Content>
 
