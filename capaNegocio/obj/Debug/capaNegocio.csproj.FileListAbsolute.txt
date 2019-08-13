@@ -7,3 +7,12 @@ E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\bin\Debug\capaEnti
 E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
 E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\obj\Debug\capaNegocio.dll
 E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\obj\Debug\capaNegocio.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\bin\Debug\capaNegocio.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\bin\Debug\capaNegocio.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\bin\Debug\capaDatos.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\bin\Debug\capaEntidades.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\bin\Debug\capaDatos.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\bin\Debug\capaEntidades.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\obj\Debug\capaNegocio.csprojResolveAssemblyReference.cache
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\obj\Debug\capaNegocio.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaNegocio\obj\Debug\capaNegocio.pdb

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabSolicitud = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.dateTimePickerHoraFinal = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFechaUso = new System.Windows.Forms.DateTimePicker();
@@ -62,12 +63,11 @@
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.timeHoraInicio = new System.Windows.Forms.Timer(this.components);
-            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.tabSolicitud.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSolicitud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSolicitud
@@ -114,6 +114,17 @@
             this.tabPage1.Size = new System.Drawing.Size(468, 479);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo";
+            // 
+            // picbox_back
+            // 
+            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
+            this.picbox_back.Location = new System.Drawing.Point(0, 0);
+            this.picbox_back.Name = "picbox_back";
+            this.picbox_back.Size = new System.Drawing.Size(24, 25);
+            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbox_back.TabIndex = 36;
+            this.picbox_back.TabStop = false;
+            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
             // 
             // dateTimePickerHoraFinal
             // 
@@ -403,33 +414,25 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Buscar";
             // 
-            // picbox_back
-            // 
-            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
-            this.picbox_back.Location = new System.Drawing.Point(0, 0);
-            this.picbox_back.Name = "picbox_back";
-            this.picbox_back.Size = new System.Drawing.Size(24, 25);
-            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbox_back.TabIndex = 36;
-            this.picbox_back.TabStop = false;
-            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
-            // 
             // fSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 509);
             this.Controls.Add(this.tabSolicitud);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "fSolicitud";
             this.Text = "Solicitud";
             this.Load += new System.EventHandler(this.fSolicitud_Load);
             this.tabSolicitud.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSolicitud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.ResumeLayout(false);
 
         }

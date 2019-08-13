@@ -30,6 +30,7 @@
         {
             this.tabRecursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
@@ -46,12 +47,11 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.tabRecursos.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRecursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.SuspendLayout();
             // 
             // tabRecursos
@@ -84,6 +84,17 @@
             this.tabPage1.Size = new System.Drawing.Size(471, 361);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo";
+            // 
+            // picbox_back
+            // 
+            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
+            this.picbox_back.Location = new System.Drawing.Point(1, 1);
+            this.picbox_back.Name = "picbox_back";
+            this.picbox_back.Size = new System.Drawing.Size(24, 25);
+            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbox_back.TabIndex = 27;
+            this.picbox_back.TabStop = false;
+            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
             // 
             // buttonGuardar
             // 
@@ -244,33 +255,25 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Buscar";
             // 
-            // picbox_back
-            // 
-            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
-            this.picbox_back.Location = new System.Drawing.Point(1, 1);
-            this.picbox_back.Name = "picbox_back";
-            this.picbox_back.Size = new System.Drawing.Size(24, 25);
-            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbox_back.TabIndex = 27;
-            this.picbox_back.TabStop = false;
-            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
-            // 
             // fRecursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(485, 394);
             this.Controls.Add(this.tabRecursos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "fRecursos";
             this.Text = "Recursos";
             this.Load += new System.EventHandler(this.fRecursos_Load);
             this.tabRecursos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRecursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.ResumeLayout(false);
 
         }

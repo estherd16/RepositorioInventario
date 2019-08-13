@@ -30,6 +30,7 @@
         {
             this.tabUsuarios = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.textBoxTelefonoUser = new System.Windows.Forms.TextBox();
             this.textBoxCorreoUser = new System.Windows.Forms.TextBox();
             this.textBoxApellidosUser = new System.Windows.Forms.TextBox();
@@ -50,12 +51,11 @@
             this.buttonEditar = new System.Windows.Forms.Button();
             this.textBoxBuscar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.tabUsuarios.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.SuspendLayout();
             // 
             // tabUsuarios
@@ -92,6 +92,17 @@
             this.tabPage1.Size = new System.Drawing.Size(489, 416);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo";
+            // 
+            // picbox_back
+            // 
+            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
+            this.picbox_back.Location = new System.Drawing.Point(0, 0);
+            this.picbox_back.Name = "picbox_back";
+            this.picbox_back.Size = new System.Drawing.Size(24, 25);
+            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbox_back.TabIndex = 35;
+            this.picbox_back.TabStop = false;
+            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
             // 
             // textBoxTelefonoUser
             // 
@@ -284,33 +295,25 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Buscar";
             // 
-            // picbox_back
-            // 
-            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
-            this.picbox_back.Location = new System.Drawing.Point(0, 0);
-            this.picbox_back.Name = "picbox_back";
-            this.picbox_back.Size = new System.Drawing.Size(24, 25);
-            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbox_back.TabIndex = 35;
-            this.picbox_back.TabStop = false;
-            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
-            // 
             // fUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 449);
             this.Controls.Add(this.tabUsuarios);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "fUsuarios";
             this.Text = "fUsuarios";
             this.Load += new System.EventHandler(this.fUsuarios_Load);
             this.tabUsuarios.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.ResumeLayout(false);
 
         }

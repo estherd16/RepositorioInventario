@@ -5,3 +5,10 @@ E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\bin\Debug\capaEntida
 E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\obj\Debug\capaDatos.csprojResolveAssemblyReference.cache
 E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\obj\Debug\capaDatos.dll
 E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\obj\Debug\capaDatos.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\bin\Debug\capaDatos.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\bin\Debug\capaDatos.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\bin\Debug\capaEntidades.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\bin\Debug\capaEntidades.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\obj\Debug\capaDatos.csprojResolveAssemblyReference.cache
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\obj\Debug\capaDatos.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaDatos\obj\Debug\capaDatos.pdb

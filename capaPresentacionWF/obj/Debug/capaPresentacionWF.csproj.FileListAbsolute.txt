@@ -50,3 +50,5 @@ J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaPresentacionWF\obj\Debug\c
 J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaPresentacionWF\obj\Debug\capaPresentacionWF.fUsuarios.resources
 J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaPresentacionWF\obj\Debug\capaPresentacionWF.Properties.Resources.resources
 J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaPresentacionWF\obj\Debug\capaPresentacionWF.csproj.GenerateResource.Cache
+E:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaPresentacionWF\obj\Debug\capaPresentacionWF.MDIRecursos.resources
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaPresentacionWF\obj\Debug\capaPresentacionWF.MDIRecursos.resources

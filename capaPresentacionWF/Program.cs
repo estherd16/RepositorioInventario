@@ -16,7 +16,7 @@ namespace capaPresentacionWF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fMenu());
+            Application.Run(new MDIRecursos());
         }
     }
 }

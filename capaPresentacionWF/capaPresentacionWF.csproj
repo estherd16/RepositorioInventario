@@ -68,6 +68,12 @@
     <Compile Include="fUsuarios.Designer.cs">
       <DependentUpon>fUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="MDIRecursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIRecursos.Designer.cs">
+      <DependentUpon>MDIRecursos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fMenu.resx">
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fUsuarios.resx">
       <DependentUpon>fUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIRecursos.resx">
+      <DependentUpon>MDIRecursos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
