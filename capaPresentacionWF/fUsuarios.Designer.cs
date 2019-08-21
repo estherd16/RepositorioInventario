@@ -30,7 +30,6 @@
         {
             this.tabUsuarios = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.textBoxTelefonoUser = new System.Windows.Forms.TextBox();
             this.textBoxCorreoUser = new System.Windows.Forms.TextBox();
             this.textBoxApellidosUser = new System.Windows.Forms.TextBox();
@@ -53,7 +52,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabUsuarios.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +69,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage1.Controls.Add(this.picbox_back);
             this.tabPage1.Controls.Add(this.textBoxTelefonoUser);
             this.tabPage1.Controls.Add(this.textBoxCorreoUser);
             this.tabPage1.Controls.Add(this.textBoxApellidosUser);
@@ -92,17 +89,6 @@
             this.tabPage1.Size = new System.Drawing.Size(489, 416);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo";
-            // 
-            // picbox_back
-            // 
-            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
-            this.picbox_back.Location = new System.Drawing.Point(0, 0);
-            this.picbox_back.Name = "picbox_back";
-            this.picbox_back.Size = new System.Drawing.Size(24, 25);
-            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbox_back.TabIndex = 35;
-            this.picbox_back.TabStop = false;
-            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
             // 
             // textBoxTelefonoUser
             // 
@@ -251,9 +237,9 @@
             // dataGridViewUsuarios
             // 
             this.dataGridViewUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsuarios.Location = new System.Drawing.Point(16, 147);
+            this.dataGridViewUsuarios.Location = new System.Drawing.Point(3, 130);
             this.dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            this.dataGridViewUsuarios.Size = new System.Drawing.Size(456, 217);
+            this.dataGridViewUsuarios.Size = new System.Drawing.Size(483, 282);
             this.dataGridViewUsuarios.TabIndex = 9;
             // 
             // buttonEliminar
@@ -301,16 +287,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 449);
             this.Controls.Add(this.tabUsuarios);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "fUsuarios";
-            this.Text = "fUsuarios";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.fUsuarios_Load);
             this.tabUsuarios.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
@@ -342,6 +327,5 @@
         private System.Windows.Forms.Button buttonEditar;
         private System.Windows.Forms.TextBox textBoxBuscar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox picbox_back;
     }
 }

@@ -1,0 +1,5 @@
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\bin\Release\capaEntidades.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\bin\Release\capaEntidades.pdb
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\obj\Release\capaEntidades.csprojResolveAssemblyReference.cache
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\obj\Release\capaEntidades.dll
+J:\IV\PROGRAMACION BASES DE DATOS\PROYECTO_PROGBD\capaEntidades\obj\Release\capaEntidades.pdb

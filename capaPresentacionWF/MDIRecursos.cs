@@ -119,9 +119,12 @@ namespace capaPresentacionWF
             {
                 fRecursos fr = new fRecursos();
                 fr.MdiParent = this;
+                
                 fr.Show();
             }
         }
+
+
 
         private void salirStripMenuItem_Click(object sender, EventArgs e)
         {

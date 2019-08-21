@@ -153,7 +153,7 @@
             this.respaldoMenu.CheckOnClick = true;
             this.respaldoMenu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.respaldoMenu.Name = "respaldoMenu";
-            this.respaldoMenu.Size = new System.Drawing.Size(152, 22);
+            this.respaldoMenu.Size = new System.Drawing.Size(122, 22);
             this.respaldoMenu.Text = "&Respaldo";
             this.respaldoMenu.Click += new System.EventHandler(this.respaldoMenu_Click);
             // 
@@ -284,6 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(603, 460);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip);

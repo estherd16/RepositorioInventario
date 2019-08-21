@@ -33,7 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fMenu.Designer.cs">
-      <DependentUpon>fMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="fRecursos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,9 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fMenu.resx">
-      <DependentUpon>fMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fRecursos.resx">
       <DependentUpon>fRecursos.cs</DependentUpon>
     </EmbeddedResource>

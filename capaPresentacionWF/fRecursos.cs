@@ -124,11 +124,6 @@ namespace capaPresentacionWF
 
         }
 
-        private void picbox_back_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            fMenu Menumostrar = new fMenu();
-            Menumostrar.Show();
-        }
+      
      }
 }

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tabSolicitud = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.picbox_back = new System.Windows.Forms.PictureBox();
             this.dateTimePickerHoraFinal = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerHoraInicio = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFechaUso = new System.Windows.Forms.DateTimePicker();
@@ -65,7 +64,6 @@
             this.timeHoraInicio = new System.Windows.Forms.Timer(this.components);
             this.tabSolicitud.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSolicitud)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +81,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage1.Controls.Add(this.picbox_back);
             this.tabPage1.Controls.Add(this.dateTimePickerHoraFinal);
             this.tabPage1.Controls.Add(this.dateTimePickerHoraInicio);
             this.tabPage1.Controls.Add(this.dateTimePickerFechaUso);
@@ -114,17 +111,6 @@
             this.tabPage1.Size = new System.Drawing.Size(468, 479);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo";
-            // 
-            // picbox_back
-            // 
-            this.picbox_back.Image = global::capaPresentacionWF.Properties.Resources.left_arrow;
-            this.picbox_back.Location = new System.Drawing.Point(0, 0);
-            this.picbox_back.Name = "picbox_back";
-            this.picbox_back.Size = new System.Drawing.Size(24, 25);
-            this.picbox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picbox_back.TabIndex = 36;
-            this.picbox_back.TabStop = false;
-            this.picbox_back.Click += new System.EventHandler(this.picbox_back_Click);
             // 
             // dateTimePickerHoraFinal
             // 
@@ -182,9 +168,9 @@
             this.labelidUs.ForeColor = System.Drawing.Color.Beige;
             this.labelidUs.Location = new System.Drawing.Point(60, 419);
             this.labelidUs.Name = "labelidUs";
-            this.labelidUs.Size = new System.Drawing.Size(69, 16);
+            this.labelidUs.Size = new System.Drawing.Size(55, 16);
             this.labelidUs.TabIndex = 22;
-            this.labelidUs.Text = "Id Usuario";
+            this.labelidUs.Text = "Usuario";
             // 
             // labelidRec
             // 
@@ -193,9 +179,9 @@
             this.labelidRec.ForeColor = System.Drawing.Color.Beige;
             this.labelidRec.Location = new System.Drawing.Point(60, 384);
             this.labelidRec.Name = "labelidRec";
-            this.labelidRec.Size = new System.Drawing.Size(80, 16);
+            this.labelidRec.Size = new System.Drawing.Size(66, 16);
             this.labelidRec.TabIndex = 21;
-            this.labelidRec.Text = "Id Recursos";
+            this.labelidRec.Text = "Recursos";
             // 
             // textBoxAsignatura
             // 
@@ -370,9 +356,9 @@
             // dataGridViewSolicitud
             // 
             this.dataGridViewSolicitud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSolicitud.Location = new System.Drawing.Point(6, 143);
+            this.dataGridViewSolicitud.Location = new System.Drawing.Point(2, 143);
             this.dataGridViewSolicitud.Name = "dataGridViewSolicitud";
-            this.dataGridViewSolicitud.Size = new System.Drawing.Size(456, 217);
+            this.dataGridViewSolicitud.Size = new System.Drawing.Size(462, 272);
             this.dataGridViewSolicitud.TabIndex = 4;
             // 
             // buttonEliminar
@@ -420,7 +406,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 509);
             this.Controls.Add(this.tabSolicitud);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "fSolicitud";
@@ -429,7 +415,6 @@
             this.tabSolicitud.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_back)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSolicitud)).EndInit();
@@ -472,6 +457,5 @@
         private System.Windows.Forms.Timer timeHoraInicio;
         private System.Windows.Forms.DateTimePicker dateTimePickerHoraFinal;
         private System.Windows.Forms.DateTimePicker dateTimePickerHoraInicio;
-        private System.Windows.Forms.PictureBox picbox_back;
     }
 }

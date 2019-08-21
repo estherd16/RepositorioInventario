@@ -38,8 +38,8 @@ namespace capaPresentacionWF
                     objetoSolicitud.horafinal = Convert.ToDateTime(dateTimePickerHoraFinal.Text);
                     objetoSolicitud.carrera = textBoxCarrera.Text;
                     objetoSolicitud.asignatura = textBoxAsignatura.Text;
-                    objetoSolicitud.idrecursos = Convert.ToInt32(comboBoxIdRecursos.Text);
-                    objetoSolicitud.idusuario = Convert.ToInt32(comboBoxIdUsuario.Text);
+                    objetoSolicitud.idrecursos = Convert.ToInt32(comboBoxIdRecursos.SelectedValue.ToString());
+                    objetoSolicitud.idusuario = Convert.ToInt32(comboBoxIdUsuario.SelectedValue.ToString());
 
                     if (logicaNS.insertarSolicitud(objetoSolicitud) > 0)
                     {
@@ -115,16 +115,17 @@ namespace capaPresentacionWF
         {
             textBoxId.Visible = false;
             labelId.Visible = false;
-
-            List<int> rcso = new List<int>();
-            rcso = logicaRE.listarRecursos().Select(x => x.idrecursos).ToList();
-            List<int> usuar = new List<int>();
-            usuar = logicaUS.listarUsuarios().Select(x => x.idusuario).ToList();
-
-            comboBoxIdUsuario.DataSource = usuar;
+            List<recursos> rcso = new List<recursos>();
+            rcso = logicaRE.listarRecursos();
+            List<Usuarios> usuar = new List<Usuarios>();
+            usuar = logicaUS.listarUsuarios();
+            comboBoxIdRecursos.ValueMember = "idrecursos";
+            comboBoxIdRecursos.DisplayMember = "nombrer";
             comboBoxIdRecursos.DataSource = rcso;
+            comboBoxIdUsuario.ValueMember = "idusuario";
+            comboBoxIdUsuario.DisplayMember = "nombres";
+            comboBoxIdUsuario.DataSource = usuar;
             dataGridViewSolicitud.DataSource = logicaNS.listarSolicitud();
-
         }
 
         private void buttonEditar_Click(object sender, EventArgs e)
@@ -177,14 +178,5 @@ namespace capaPresentacionWF
             List<Solicitud> listaSolicitud = logicaNS.BuscarSolicitud(textBoxBuscar.Text);
             dataGridViewSolicitud.DataSource = listaSolicitud;
         }
-
-        private void picbox_back_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            fMenu Menumostrar = new fMenu();
-            Menumostrar.Show();
-        }
-
-
     }
 }

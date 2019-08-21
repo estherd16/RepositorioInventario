@@ -99,19 +99,14 @@ namespace capaPresentacionWF
             textBoxId.Visible = true;
             textBoxId.Enabled = false;
             labelId.Visible = true;
-
             textBoxId.Text = dataGridViewUsuarios.CurrentRow.Cells["idusuario"].Value.ToString();
             textBoxcedulauser.Text = dataGridViewUsuarios.CurrentRow.Cells["cedula"].Value.ToString();
             textBoxNombreUser.Text = dataGridViewUsuarios.CurrentRow.Cells["nombres"].Value.ToString();
             textBoxApellidosUser.Text = dataGridViewUsuarios.CurrentRow.Cells["apellidos"].Value.ToString();
             textBoxCorreoUser.Text= dataGridViewUsuarios.CurrentRow.Cells["email"].Value.ToString();
             textBoxTelefonoUser.Text = dataGridViewUsuarios.CurrentRow.Cells["telefono"].Value.ToString();
-
             tabUsuarios.SelectedTab = tabPage1;
             buttonGuardar.Text = "Actualizar";
-
-
-
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
@@ -136,14 +131,6 @@ namespace capaPresentacionWF
             List<Usuarios> listaUsuarios = logicaNUS.BuscarUsuarios(textBoxBuscar.Text);
             dataGridViewUsuarios.DataSource = listaUsuarios;
         }
-
-        private void picbox_back_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            fMenu Menumostrar = new fMenu();
-            Menumostrar.Show();
-        }
-
         }
     }
 
